@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VehicleManagement", "Vehicl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseSQLTester", "DatabaseSQLTester\DatabaseSQLTester.csproj", "{712AE185-54BC-4D05-A99B-B7A8667FB262}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VBMessageBoxTranslater", "VBMessageBoxTranslater\VBMessageBoxTranslater.csproj", "{56D209BA-A972-43D6-BF2B-0952ADDE419A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{712AE185-54BC-4D05-A99B-B7A8667FB262}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{712AE185-54BC-4D05-A99B-B7A8667FB262}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{712AE185-54BC-4D05-A99B-B7A8667FB262}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56D209BA-A972-43D6-BF2B-0952ADDE419A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56D209BA-A972-43D6-BF2B-0952ADDE419A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56D209BA-A972-43D6-BF2B-0952ADDE419A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56D209BA-A972-43D6-BF2B-0952ADDE419A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
