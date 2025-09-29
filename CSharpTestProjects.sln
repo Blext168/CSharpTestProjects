@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35919.96 d17.13
+VisualStudioVersion = 17.13.35919.96
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrimeChecker", "PrimeChecker\PrimeChecker.csproj", "{E27B92BC-4771-4F87-AE73-212DD8F56637}"
 EndProject
@@ -16,6 +16,19 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseSQLTester", "DatabaseSQLTester\DatabaseSQLTester.csproj", "{712AE185-54BC-4D05-A99B-B7A8667FB262}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VBMessageBoxTranslater", "VBMessageBoxTranslater\VBMessageBoxTranslater.csproj", "{56D209BA-A972-43D6-BF2B-0952ADDE419A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExamplesForBeginners", "ExamplesForBeginners\ExamplesForBeginners.csproj", "{45498FE7-8721-4961-B599-36A64002031E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DesignPatterns", "DesignPatterns", "{61FFD14A-9625-43FA-A7A5-9B6D7F97CC2D}"
+	ProjectSection(SolutionItems) = preProject
+		ReadMe.md = ReadMe.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreationalPatterns", "CreationalPatterns\CreationalPatterns.csproj", "{8429D0DC-9ADB-4B5D-9579-B7750B211768}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StructuralPatterns", "StructuralPatterns\StructuralPatterns.csproj", "{A6E31030-E3B7-4874-B6F5-DEE1DEE506A1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "StartingProjects", "StartingProjects", "{F6241BCC-7BE2-40F8-B89D-F991BAEF5ABC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,11 +64,32 @@ Global
 		{56D209BA-A972-43D6-BF2B-0952ADDE419A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{56D209BA-A972-43D6-BF2B-0952ADDE419A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{56D209BA-A972-43D6-BF2B-0952ADDE419A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45498FE7-8721-4961-B599-36A64002031E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45498FE7-8721-4961-B599-36A64002031E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45498FE7-8721-4961-B599-36A64002031E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45498FE7-8721-4961-B599-36A64002031E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8429D0DC-9ADB-4B5D-9579-B7750B211768}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8429D0DC-9ADB-4B5D-9579-B7750B211768}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8429D0DC-9ADB-4B5D-9579-B7750B211768}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8429D0DC-9ADB-4B5D-9579-B7750B211768}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6E31030-E3B7-4874-B6F5-DEE1DEE506A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6E31030-E3B7-4874-B6F5-DEE1DEE506A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6E31030-E3B7-4874-B6F5-DEE1DEE506A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6E31030-E3B7-4874-B6F5-DEE1DEE506A1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3ABD0127-3D9C-442D-82E5-37F557A15C15}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8429D0DC-9ADB-4B5D-9579-B7750B211768} = {61FFD14A-9625-43FA-A7A5-9B6D7F97CC2D}
+		{A6E31030-E3B7-4874-B6F5-DEE1DEE506A1} = {61FFD14A-9625-43FA-A7A5-9B6D7F97CC2D}
+		{9CA3EDF3-1C06-4489-A957-79E80CB2D749} = {F6241BCC-7BE2-40F8-B89D-F991BAEF5ABC}
+		{456B3920-FE15-4F75-97DC-7B571A95C2D7} = {F6241BCC-7BE2-40F8-B89D-F991BAEF5ABC}
+		{E27B92BC-4771-4F87-AE73-212DD8F56637} = {F6241BCC-7BE2-40F8-B89D-F991BAEF5ABC}
+		{3B83C300-9D02-40B6-BEFF-3E3A341F3D25} = {F6241BCC-7BE2-40F8-B89D-F991BAEF5ABC}
+		{4A47359C-9C5E-440B-811C-507C487E15F9} = {F6241BCC-7BE2-40F8-B89D-F991BAEF5ABC}
 	EndGlobalSection
 EndGlobal
