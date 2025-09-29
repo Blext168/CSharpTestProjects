@@ -18,18 +18,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8ad9b69f-81f7-400c-a72c-f0871d46c5c2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/BehavioralPatterns/BehavioralPatterns.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BehavioralPatterns/Observer/ConcreteObserver/ConsoleDisplayObserver.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BehavioralPatterns/Observer/ConcreteObserver/MemoryLoggerObserver.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BehavioralPatterns/Observer/Extensions/ServiceCollectionExtensions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BehavioralPatterns/Observer/IObserver.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BehavioralPatterns/Observer/IWeatherStation.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BehavioralPatterns/Observer/Observer.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BehavioralPatterns/Observer/WeatherController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BehavioralPatterns/Observer/WeatherStation.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BehavioralPatterns/Program.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BehavioralPatterns/Strategy/Extensions/ServiceCollectionExtensions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BehavioralPatterns/Strategy/IShippingStrategy.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BehavioralPatterns/Strategy/ShippingCalculator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BehavioralPatterns/Strategy/Strategies/AirShippingStrategy.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BehavioralPatterns/Strategy/Strategies/DroneShippingStrategy.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BehavioralPatterns/Strategy/Strategies/GroundShippingStrategy.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CSharpTestProjects/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CSharpTestProjects/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSharpTestProjects.sln" beforeDir="false" afterPath="$PROJECT_DIR$/CSharpTestProjects.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BehavioralPatterns/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BehavioralPatterns/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,6 +64,12 @@
     <setting file="file://$PROJECT_DIR$/BehavioralPatterns/Observer/WeatherController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BehavioralPatterns/Observer/WeatherStation.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BehavioralPatterns/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BehavioralPatterns/Strategy/Extensions/ServiceCollectionExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BehavioralPatterns/Strategy/IShippingStrategy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BehavioralPatterns/Strategy/ShippingCalculator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BehavioralPatterns/Strategy/Strategies/AirShippingStrategy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BehavioralPatterns/Strategy/Strategies/DroneShippingStrategy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BehavioralPatterns/Strategy/Strategies/GroundShippingStrategy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/StructuralPatterns/Adapter/DisplayTemperature.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/StructuralPatterns/Adapter/Extensions/ServiceCollectionExtensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/StructuralPatterns/Adapter/FahrenheitToCelsiusAdapter.cs" root0="FORCE_HIGHLIGHTING" />
@@ -366,7 +368,7 @@
       <workItem from="1751033280278" duration="1663000" />
       <workItem from="1758873818493" duration="16306000" />
       <workItem from="1759131669922" duration="2043000" />
-      <workItem from="1759133793043" duration="9076000" />
+      <workItem from="1759133793043" duration="11728000" />
     </task>
     <task id="LOCAL-00001" summary="Add DatabaseSQLTester project with SQLite integration&#10;&#10;Introduced a new project, `DatabaseSQLTester`, featuring SQLite integration using Entity Framework Core. This includes models, a DbContext for handling database interactions, test data initialization, and a console-based SQL query interface.">
       <option name="closed" value="true" />
@@ -440,7 +442,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759141070725</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Implement `Observer` pattern: Add `IObserver` and `IWeatherStation` interfaces, `WeatherStation` subject, `ConsoleDisplayObserver` and `MemoryLoggerObserver` implementations. Update `Program.cs` to demonstrate usage. Include documentation, DI extensions, and example registration.">
+      <option name="closed" value="true" />
+      <created>1759143158533</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1759143158533</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -460,7 +470,8 @@
     <MESSAGE value="Refactor `Adapter` implementation: Replace email notification logic with a temperature sensor integration using the Adapter pattern. Includes refactoring `Program.cs` to showcase the new functionality." />
     <MESSAGE value="Implement `Facade` pattern: Add `OrderFacade` encapsulating `InventoryService`, `PaymentService`, and `ShippingService`. Update `Program.cs` to demonstrate usage. Include documentation and DI extensions for simplified registration." />
     <MESSAGE value="Implement `Composite` pattern: Add `GraphicEditor` client and structure with `Circle`, `Rectangle`, `Group`, and `IGraphic` component. Update `Program.cs` to demonstrate usage. Include documentation and DI extensions for example registration." />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement `Composite` pattern: Add `GraphicEditor` client and structure with `Circle`, `Rectangle`, `Group`, and `IGraphic` component. Update `Program.cs` to demonstrate usage. Include documentation and DI extensions for example registration." />
+    <MESSAGE value="Implement `Observer` pattern: Add `IObserver` and `IWeatherStation` interfaces, `WeatherStation` subject, `ConsoleDisplayObserver` and `MemoryLoggerObserver` implementations. Update `Program.cs` to demonstrate usage. Include documentation, DI extensions, and example registration." />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement `Observer` pattern: Add `IObserver` and `IWeatherStation` interfaces, `WeatherStation` subject, `ConsoleDisplayObserver` and `MemoryLoggerObserver` implementations. Update `Program.cs` to demonstrate usage. Include documentation, DI extensions, and example registration." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
