@@ -2,6 +2,8 @@
 using Microsoft.Extensions.Hosting;
 using StructuralPatterns.Adapter;
 using StructuralPatterns.Adapter.Extensions;
+using StructuralPatterns.Composite;
+using StructuralPatterns.Composite.Extensions;
 using StructuralPatterns.Decorator;
 using StructuralPatterns.Decorator.ServiceRegistration;
 using StructuralPatterns.Facade;
@@ -14,7 +16,7 @@ internal abstract class Program
     public static void Main(string[] args)
     {
         // Adapter
-        Console.WriteLine("\n-----Adapter-----");
+        Console.WriteLine("\n----- Adapter -----");
         ServiceCollection adapterServices = new();
         
         // Variante 1: Manuelle Registierung:
@@ -37,7 +39,7 @@ internal abstract class Program
         adapterDisplay.Show();
         
         // Decorator
-        Console.WriteLine("\n-----Decorator-----");
+        Console.WriteLine("\n----- Decorator -----");
         HostApplicationBuilder decoratorBuilder = Host.CreateApplicationBuilder(args);
         IServiceCollection decoratorServices = DecoratorServices.RegisterServices(decoratorBuilder.Services);
 
@@ -51,7 +53,7 @@ internal abstract class Program
         });
         
         // Facade
-        Console.WriteLine("\n-----Facade-----");
+        Console.WriteLine("\n----- Facade -----");
         // Setup DI-Container
         ServiceCollection facadeServices = new();
         facadeServices.AddOrderFacade();
@@ -60,5 +62,14 @@ internal abstract class Program
         // Consumer verwendet die Facade und bleibt dabei leicht und unabhängig
         OrderController controller = facadeProvider.GetRequiredService<OrderController>();
         controller.CreateOrder();
+        
+        // Composite
+        Console.WriteLine("\n----- Composite -----");
+        ServiceCollection compositeServices = new();
+        compositeServices.AddCompositeGraphic();
+        ServiceProvider compositeProvider = compositeServices.BuildServiceProvider();
+        
+        GraphicEditor editor = compositeProvider.GetRequiredService<GraphicEditor>();
+        editor.Render();
     }
 }

@@ -17,17 +17,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8ad9b69f-81f7-400c-a72c-f0871d46c5c2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/StructuralPatterns/Adapter/Adapter.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StructuralPatterns/Decorator/Decorator.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StructuralPatterns/Facade/Extensions/ServicecollectionExtensions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StructuralPatterns/Facade/Facade.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StructuralPatterns/Facade/OrderController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StructuralPatterns/Facade/OrderFacade.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StructuralPatterns/Facade/Subsystems/InventoryService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StructuralPatterns/Facade/Subsystems/PaymentService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StructuralPatterns/Facade/Subsystems/ShippingService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StructuralPatterns/Composite/Component/IGraphic.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StructuralPatterns/Composite/Composite.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StructuralPatterns/Composite/Extensions/ServiceCollectionExtensions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StructuralPatterns/Composite/GraphicEditor.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StructuralPatterns/Composite/Group.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StructuralPatterns/Composite/Leaf/Circle.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StructuralPatterns/Composite/Leaf/Rectangle.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CSharpTestProjects/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CSharpTestProjects/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReadMe.md" beforeDir="false" afterPath="$PROJECT_DIR$/ReadMe.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/StructuralPatterns/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/StructuralPatterns/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -64,6 +61,12 @@
     <setting file="file://$PROJECT_DIR$/StructuralPatterns/Adapter/FahrenheitToCelsiusAdapter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/StructuralPatterns/Adapter/ITemperatureSensor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/StructuralPatterns/Adapter/LegacyFahrenheitSensor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/StructuralPatterns/Composite/Component/IGraphic.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/StructuralPatterns/Composite/Extensions/ServiceCollectionExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/StructuralPatterns/Composite/GraphicEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/StructuralPatterns/Composite/Group.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/StructuralPatterns/Composite/Leaf/Circle.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/StructuralPatterns/Composite/Leaf/Rectangle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/StructuralPatterns/Facade/Extensions/ServicecollectionExtensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/StructuralPatterns/Facade/OrderController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/StructuralPatterns/Facade/OrderFacade.cs" root0="FORCE_HIGHLIGHTING" />
@@ -329,7 +332,7 @@
       <workItem from="1751033280278" duration="1663000" />
       <workItem from="1758873818493" duration="16306000" />
       <workItem from="1759131669922" duration="2043000" />
-      <workItem from="1759133793043" duration="5524000" />
+      <workItem from="1759133793043" duration="7178000" />
     </task>
     <task id="LOCAL-00001" summary="Add DatabaseSQLTester project with SQLite integration&#10;&#10;Introduced a new project, `DatabaseSQLTester`, featuring SQLite integration using Entity Framework Core. This includes models, a DbContext for handling database interactions, test data initialization, and a console-based SQL query interface.">
       <option name="closed" value="true" />
@@ -387,7 +390,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759136401471</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Implement `Facade` pattern: Add `OrderFacade` encapsulating `InventoryService`, `PaymentService`, and `ShippingService`. Update `Program.cs` to demonstrate usage. Include documentation and DI extensions for simplified registration.">
+      <option name="closed" value="true" />
+      <created>1759139439767</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1759139439767</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -405,7 +416,8 @@
     <MESSAGE value="Projektkonfigurationsdateien für IntelliJ IDEA hinzugefügt." />
     <MESSAGE value="merge" />
     <MESSAGE value="Refactor `Adapter` implementation: Replace email notification logic with a temperature sensor integration using the Adapter pattern. Includes refactoring `Program.cs` to showcase the new functionality." />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor `Adapter` implementation: Replace email notification logic with a temperature sensor integration using the Adapter pattern. Includes refactoring `Program.cs` to showcase the new functionality." />
+    <MESSAGE value="Implement `Facade` pattern: Add `OrderFacade` encapsulating `InventoryService`, `PaymentService`, and `ShippingService`. Update `Program.cs` to demonstrate usage. Include documentation and DI extensions for simplified registration." />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement `Facade` pattern: Add `OrderFacade` encapsulating `InventoryService`, `PaymentService`, and `ShippingService`. Update `Program.cs` to demonstrate usage. Include documentation and DI extensions for simplified registration." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
