@@ -4,6 +4,8 @@ using StructuralPatterns.Adapter;
 using StructuralPatterns.Adapter.Extensions;
 using StructuralPatterns.Decorator;
 using StructuralPatterns.Decorator.ServiceRegistration;
+using StructuralPatterns.Facade;
+using StructuralPatterns.Facade.Extensions;
 
 namespace StructuralPatterns;
 
@@ -14,6 +16,21 @@ internal abstract class Program
         // Adapter
         Console.WriteLine("\n-----Adapter-----");
         ServiceCollection adapterServices = new();
+        
+        // Variante 1: Manuelle Registierung:
+        adapterServices.AddTransient<LegacyFahrenheitSensor>();
+        adapterServices.AddTransient<ITemperatureSensor>(sp =>
+        {
+            LegacyFahrenheitSensor legacy = sp.GetRequiredService<LegacyFahrenheitSensor>();
+            return new FahrenheitToCelsiusAdapter(legacy);
+        });
+        
+        adapterServices.AddTransient<DisplayTemperature>();
+        ServiceProvider provider = adapterServices.BuildServiceProvider();
+        DisplayTemperature display = provider.GetRequiredService<DisplayTemperature>();
+        display.Show();
+        
+        // Variante 2: Verwendung der Extension-Methode zur Kapselung
         adapterServices.AddAdaptedTemperatureSensor();
         ServiceProvider adapterProvider = adapterServices.BuildServiceProvider();
         DisplayTemperature adapterDisplay = adapterProvider.GetRequiredService<DisplayTemperature>();
@@ -32,5 +49,16 @@ internal abstract class Program
             Author = "Danilo Schiefer",
             Price = 12.99M
         });
+        
+        // Facade
+        Console.WriteLine("\n-----Facade-----");
+        // Setup DI-Container
+        ServiceCollection facadeServices = new();
+        facadeServices.AddOrderFacade();
+        ServiceProvider facadeProvider = facadeServices.BuildServiceProvider();
+        
+        // Consumer verwendet die Facade und bleibt dabei leicht und unabhängig
+        OrderController controller = facadeProvider.GetRequiredService<OrderController>();
+        controller.CreateOrder();
     }
 }

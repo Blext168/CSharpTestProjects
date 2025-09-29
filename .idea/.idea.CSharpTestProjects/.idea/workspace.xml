@@ -17,18 +17,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8ad9b69f-81f7-400c-a72c-f0871d46c5c2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/StructuralPatterns/Adapter/DisplayTemperature.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StructuralPatterns/Adapter/Extensions/ServiceCollectionExtensions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StructuralPatterns/Adapter/FahrenheitToCelsiusAdapter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StructuralPatterns/Adapter/ITemperatureSensor.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StructuralPatterns/Adapter/LegacyFahrenheitSensor.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StructuralPatterns/Adapter/Adapter.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StructuralPatterns/Decorator/Decorator.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StructuralPatterns/Facade/Extensions/ServicecollectionExtensions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StructuralPatterns/Facade/Facade.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StructuralPatterns/Facade/OrderController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StructuralPatterns/Facade/OrderFacade.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StructuralPatterns/Facade/Subsystems/InventoryService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StructuralPatterns/Facade/Subsystems/PaymentService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StructuralPatterns/Facade/Subsystems/ShippingService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CSharpTestProjects/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CSharpTestProjects/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StructuralPatterns/Adapter/EmailNotificationAdapter.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/StructuralPatterns/Adapter/EmailSender.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/StructuralPatterns/Adapter/IEmailSender.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/StructuralPatterns/Adapter/INotificationAdapter.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/StructuralPatterns/Adapter/Message.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/StructuralPatterns/Adapter/User.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReadMe.md" beforeDir="false" afterPath="$PROJECT_DIR$/ReadMe.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/StructuralPatterns/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/StructuralPatterns/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,6 +64,12 @@
     <setting file="file://$PROJECT_DIR$/StructuralPatterns/Adapter/FahrenheitToCelsiusAdapter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/StructuralPatterns/Adapter/ITemperatureSensor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/StructuralPatterns/Adapter/LegacyFahrenheitSensor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/StructuralPatterns/Facade/Extensions/ServicecollectionExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/StructuralPatterns/Facade/OrderController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/StructuralPatterns/Facade/OrderFacade.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/StructuralPatterns/Facade/Subsystems/InventoryService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/StructuralPatterns/Facade/Subsystems/PaymentService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/StructuralPatterns/Facade/Subsystems/ShippingService.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -94,6 +99,11 @@
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "reference.settings.grazie",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "Markdown"
+    ]
   }
 }]]></component>
   <component name="RunManager" selected=".NET Project.StructuralPatterns">
@@ -319,7 +329,7 @@
       <workItem from="1751033280278" duration="1663000" />
       <workItem from="1758873818493" duration="16306000" />
       <workItem from="1759131669922" duration="2043000" />
-      <workItem from="1759133793043" duration="2589000" />
+      <workItem from="1759133793043" duration="5524000" />
     </task>
     <task id="LOCAL-00001" summary="Add DatabaseSQLTester project with SQLite integration&#10;&#10;Introduced a new project, `DatabaseSQLTester`, featuring SQLite integration using Entity Framework Core. This includes models, a DbContext for handling database interactions, test data initialization, and a console-based SQL query interface.">
       <option name="closed" value="true" />
@@ -369,7 +379,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759134194366</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Refactor `Adapter` implementation: Replace email notification logic with a temperature sensor integration using the Adapter pattern. Includes refactoring `Program.cs` to showcase the new functionality.">
+      <option name="closed" value="true" />
+      <created>1759136401471</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1759136401471</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -386,7 +404,8 @@
     <MESSAGE value="Add `StartingProjects` to solution configuration and sort projects." />
     <MESSAGE value="Projektkonfigurationsdateien für IntelliJ IDEA hinzugefügt." />
     <MESSAGE value="merge" />
-    <option name="LAST_COMMIT_MESSAGE" value="merge" />
+    <MESSAGE value="Refactor `Adapter` implementation: Replace email notification logic with a temperature sensor integration using the Adapter pattern. Includes refactoring `Program.cs` to showcase the new functionality." />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor `Adapter` implementation: Replace email notification logic with a temperature sensor integration using the Adapter pattern. Includes refactoring `Program.cs` to showcase the new functionality." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
