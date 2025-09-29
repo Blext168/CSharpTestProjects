@@ -16,7 +16,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8ad9b69f-81f7-400c-a72c-f0871d46c5c2" name="Changes" comment="" />
+    <list default="true" id="8ad9b69f-81f7-400c-a72c-f0871d46c5c2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/StructuralPatterns/Adapter/DisplayTemperature.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StructuralPatterns/Adapter/Extensions/ServiceCollectionExtensions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StructuralPatterns/Adapter/FahrenheitToCelsiusAdapter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StructuralPatterns/Adapter/ITemperatureSensor.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StructuralPatterns/Adapter/LegacyFahrenheitSensor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CSharpTestProjects/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CSharpTestProjects/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StructuralPatterns/Adapter/EmailNotificationAdapter.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/StructuralPatterns/Adapter/EmailSender.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/StructuralPatterns/Adapter/IEmailSender.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/StructuralPatterns/Adapter/INotificationAdapter.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/StructuralPatterns/Adapter/Message.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/StructuralPatterns/Adapter/User.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/StructuralPatterns/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/StructuralPatterns/Program.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,45 +60,11 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/CreationalPatterns/AbstractFactory/IDatabase.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/CreationalPatterns/AbstractFactory/IDatabaseFactory.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/CreationalPatterns/AbstractFactory/NoSqlDatabase.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/CreationalPatterns/AbstractFactory/NoSqlDatabaseFactory.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/CreationalPatterns/AbstractFactory/SqlDatabase.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/CreationalPatterns/AbstractFactory/SqlDatabaseFactory.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/CreationalPatterns/Builder/Address.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/CreationalPatterns/Builder/AddressBuilder.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/CreationalPatterns/FactoryMethod/IProduct.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/CreationalPatterns/FactoryMethod/IProductFactory.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/CreationalPatterns/FactoryMethod/MentoringFactory.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/CreationalPatterns/FactoryMethod/MentoringOpportunity.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/CreationalPatterns/FactoryMethod/TrainingFactory.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/CreationalPatterns/FactoryMethod/TrainingOffering.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/CreationalPatterns/Program.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/CreationalPatterns/Singleton/Logger.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/DatabaseSQLTester/HandelsDbContext.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/DatabaseSQLTester/Model/Artikel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/DatabaseSQLTester/Model/Lager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/DatabaseSQLTester/Model/Verkauf.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/DatabaseSQLTester/Program.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/DatabaseSQLTester/TestDataInitializer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/StructuralPatterns/Adapter/EmailNotificationAdapter.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/StructuralPatterns/Adapter/EmailSender.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/StructuralPatterns/Adapter/IEmailSender.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/StructuralPatterns/Adapter/INotificationAdapter.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/StructuralPatterns/Adapter/Message.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/StructuralPatterns/Adapter/User.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/StructuralPatterns/Decorator/Book.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/StructuralPatterns/Decorator/BookRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/StructuralPatterns/Decorator/BookService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/StructuralPatterns/Decorator/IBookRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/StructuralPatterns/Decorator/IBookService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/StructuralPatterns/Decorator/LoggingDecorator/LoggingBookServiceDecorator.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/StructuralPatterns/Decorator/ServiceRegistration/DecoratorServices.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/StructuralPatterns/Decorator/ValidationDecorator/BookValidator.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/StructuralPatterns/Decorator/ValidationDecorator/ValidationBookServiceDecorator.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/StructuralPatterns/Program.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/VBMessageBoxTranslater/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/StructuralPatterns/Adapter/DisplayTemperature.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/StructuralPatterns/Adapter/Extensions/ServiceCollectionExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/StructuralPatterns/Adapter/FahrenheitToCelsiusAdapter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/StructuralPatterns/Adapter/ITemperatureSensor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/StructuralPatterns/Adapter/LegacyFahrenheitSensor.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -97,6 +77,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    ".NET Project.Calculator.executor": "Run",
     ".NET Project.CreationalPatterns.executor": "Debug",
     ".NET Project.DatabaseSQLTester.executor": "Debug",
     ".NET Project.StructuralPatterns.executor": "Run",
@@ -111,11 +92,11 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.grazie",
+    "settings.editor.selected.configurable": "reference.settings.grazie",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected=".NET Project.Calculator">
+  <component name="RunManager" selected=".NET Project.StructuralPatterns">
     <configuration name="Calculator" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -338,7 +319,7 @@
       <workItem from="1751033280278" duration="1663000" />
       <workItem from="1758873818493" duration="16306000" />
       <workItem from="1759131669922" duration="2043000" />
-      <workItem from="1759133793043" duration="333000" />
+      <workItem from="1759133793043" duration="2589000" />
     </task>
     <task id="LOCAL-00001" summary="Add DatabaseSQLTester project with SQLite integration&#10;&#10;Introduced a new project, `DatabaseSQLTester`, featuring SQLite integration using Entity Framework Core. This includes models, a DbContext for handling database interactions, test data initialization, and a console-based SQL query interface.">
       <option name="closed" value="true" />
@@ -380,7 +361,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759134100012</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="merge">
+      <option name="closed" value="true" />
+      <created>1759134194366</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1759134194366</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -396,7 +385,8 @@
     <MESSAGE value="Add DesignPatterns projects and implement examples&#10;&#10;Introduce `CreationalPatterns` and `StructuralPatterns` projects with examples of various design patterns, including Singleton, Factory Method, Abstract Factory, Builder, Adapter, Decorator, and more. Added documentation (`ReadMe.md`) summarizing patterns with their purposes, problems addressed, solutions, and examples." />
     <MESSAGE value="Add `StartingProjects` to solution configuration and sort projects." />
     <MESSAGE value="Projektkonfigurationsdateien für IntelliJ IDEA hinzugefügt." />
-    <option name="LAST_COMMIT_MESSAGE" value="Projektkonfigurationsdateien für IntelliJ IDEA hinzugefügt." />
+    <MESSAGE value="merge" />
+    <option name="LAST_COMMIT_MESSAGE" value="merge" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

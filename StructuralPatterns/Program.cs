@@ -1,5 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using StructuralPatterns.Adapter;
+using StructuralPatterns.Adapter.Extensions;
 using StructuralPatterns.Decorator;
 using StructuralPatterns.Decorator.ServiceRegistration;
 
@@ -9,14 +11,22 @@ internal abstract class Program
 {
     public static void Main(string[] args)
     {
+        // Adapter
+        Console.WriteLine("\n-----Adapter-----");
+        ServiceCollection adapterServices = new();
+        adapterServices.AddAdaptedTemperatureSensor();
+        ServiceProvider adapterProvider = adapterServices.BuildServiceProvider();
+        DisplayTemperature adapterDisplay = adapterProvider.GetRequiredService<DisplayTemperature>();
+        adapterDisplay.Show();
+        
         // Decorator
         Console.WriteLine("\n-----Decorator-----");
-        HostApplicationBuilder builder = Host.CreateApplicationBuilder(args);
-        IServiceCollection services = DecoratorServices.RegisterServices(builder.Services);
+        HostApplicationBuilder decoratorBuilder = Host.CreateApplicationBuilder(args);
+        IServiceCollection decoratorServices = DecoratorServices.RegisterServices(decoratorBuilder.Services);
 
-        ServiceProvider provider = services.BuildServiceProvider();
-        IBookService? service = provider.GetService<IBookService>();
-        service?.AddBook(new Book
+        ServiceProvider decoratorProvider = decoratorServices.BuildServiceProvider();
+        IBookService? decoratorService = decoratorProvider.GetService<IBookService>();
+        decoratorService?.AddBook(new Book
         {
             Title = "Decorator Pattern in C#",
             Author = "Danilo Schiefer",
