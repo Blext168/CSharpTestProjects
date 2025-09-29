@@ -18,14 +18,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8ad9b69f-81f7-400c-a72c-f0871d46c5c2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/BehavioralPatterns/Strategy/Extensions/ServiceCollectionExtensions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BehavioralPatterns/Strategy/IShippingStrategy.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BehavioralPatterns/Strategy/ShippingCalculator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BehavioralPatterns/Strategy/Strategies/AirShippingStrategy.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BehavioralPatterns/Strategy/Strategies/DroneShippingStrategy.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BehavioralPatterns/Strategy/Strategies/GroundShippingStrategy.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BehavioralPatterns/Strategy/Strategy.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CSharpTestProjects/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CSharpTestProjects/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BehavioralPatterns/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BehavioralPatterns/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,33 +91,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Project.BehavioralPatterns.executor": "Run",
-    ".NET Project.Calculator.executor": "Run",
-    ".NET Project.CreationalPatterns.executor": "Debug",
-    ".NET Project.DatabaseSQLTester.executor": "Debug",
-    ".NET Project.StructuralPatterns.executor": "Run",
-    ".NET Project.VBMessageBoxTranslater.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/Schiefer/Desktop/C# Projekte/CSharpTestProjects/CSharpTestProjects.sln",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "reference.settings.grazie",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Project.BehavioralPatterns.executor&quot;: &quot;Run&quot;,
+    &quot;.NET Project.Calculator.executor&quot;: &quot;Run&quot;,
+    &quot;.NET Project.CreationalPatterns.executor&quot;: &quot;Debug&quot;,
+    &quot;.NET Project.DatabaseSQLTester.executor&quot;: &quot;Debug&quot;,
+    &quot;.NET Project.StructuralPatterns.executor&quot;: &quot;Run&quot;,
+    &quot;.NET Project.VBMessageBoxTranslater.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Schiefer/Desktop/C# Projekte/CSharpTestProjects/CSharpTestProjects.sln&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.grazie&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "Markdown"
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;Markdown&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Project.BehavioralPatterns">
     <configuration name="BehavioralPatterns" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
@@ -368,7 +362,8 @@
       <workItem from="1751033280278" duration="1663000" />
       <workItem from="1758873818493" duration="16306000" />
       <workItem from="1759131669922" duration="2043000" />
-      <workItem from="1759133793043" duration="11728000" />
+      <workItem from="1759133793043" duration="11749000" />
+      <workItem from="1759150205587" duration="1181000" />
     </task>
     <task id="LOCAL-00001" summary="Add DatabaseSQLTester project with SQLite integration&#10;&#10;Introduced a new project, `DatabaseSQLTester`, featuring SQLite integration using Entity Framework Core. This includes models, a DbContext for handling database interactions, test data initialization, and a console-based SQL query interface.">
       <option name="closed" value="true" />
@@ -450,7 +445,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759143158533</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Implement `Strategy` pattern: Add `IShippingStrategy` interface, `ShippingCalculator` context, and `Ground`, `Air`, and `Drone` strategies. Update `Program.cs` to demonstrate usage with runtime strategy selection and DI extensions for strategy registration.">
+      <option name="closed" value="true" />
+      <created>1759147031253</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1759147031253</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -471,7 +474,8 @@
     <MESSAGE value="Implement `Facade` pattern: Add `OrderFacade` encapsulating `InventoryService`, `PaymentService`, and `ShippingService`. Update `Program.cs` to demonstrate usage. Include documentation and DI extensions for simplified registration." />
     <MESSAGE value="Implement `Composite` pattern: Add `GraphicEditor` client and structure with `Circle`, `Rectangle`, `Group`, and `IGraphic` component. Update `Program.cs` to demonstrate usage. Include documentation and DI extensions for example registration." />
     <MESSAGE value="Implement `Observer` pattern: Add `IObserver` and `IWeatherStation` interfaces, `WeatherStation` subject, `ConsoleDisplayObserver` and `MemoryLoggerObserver` implementations. Update `Program.cs` to demonstrate usage. Include documentation, DI extensions, and example registration." />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement `Observer` pattern: Add `IObserver` and `IWeatherStation` interfaces, `WeatherStation` subject, `ConsoleDisplayObserver` and `MemoryLoggerObserver` implementations. Update `Program.cs` to demonstrate usage. Include documentation, DI extensions, and example registration." />
+    <MESSAGE value="Implement `Strategy` pattern: Add `IShippingStrategy` interface, `ShippingCalculator` context, and `Ground`, `Air`, and `Drone` strategies. Update `Program.cs` to demonstrate usage with runtime strategy selection and DI extensions for strategy registration." />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement `Strategy` pattern: Add `IShippingStrategy` interface, `ShippingCalculator` context, and `Ground`, `Air`, and `Drone` strategies. Update `Program.cs` to demonstrate usage with runtime strategy selection and DI extensions for strategy registration." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
