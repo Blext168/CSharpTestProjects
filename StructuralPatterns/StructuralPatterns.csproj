@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net9.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\CreationalPatterns\CreationalPatterns.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="FluentValidation" Version="12.0.0" />
+      <PackageReference Include="Microsoft.Extensions.Hosting" Version="10.0.0-rc.1.25451.107" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Reference Include="DevExpress.Xpo.v25.1">
+        <HintPath>..\..\..\..\..\..\Program Files\DevExpress 25.1\Components\Offline Packages\devexpress.xpo\25.1.4\lib\net8.0\DevExpress.Xpo.v25.1.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
+</Project>
