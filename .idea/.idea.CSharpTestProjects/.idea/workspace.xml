@@ -95,25 +95,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;.NET Project.CreationalPatterns.executor&quot;: &quot;Debug&quot;,
-    &quot;.NET Project.DatabaseSQLTester.executor&quot;: &quot;Debug&quot;,
-    &quot;.NET Project.StructuralPatterns.executor&quot;: &quot;Run&quot;,
-    &quot;.NET Project.VBMessageBoxTranslater.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Schiefer/Desktop/C# Projekte/CSharpTestProjects/CSharpTestProjects.sln&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.grazie&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    ".NET Project.CreationalPatterns.executor": "Debug",
+    ".NET Project.DatabaseSQLTester.executor": "Debug",
+    ".NET Project.StructuralPatterns.executor": "Run",
+    ".NET Project.VBMessageBoxTranslater.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/Schiefer/Desktop/C# Projekte/CSharpTestProjects/CSharpTestProjects.sln",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.grazie",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected=".NET Project.Calculator">
     <configuration name="Calculator" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
@@ -337,6 +338,7 @@
       <workItem from="1751033280278" duration="1663000" />
       <workItem from="1758873818493" duration="16306000" />
       <workItem from="1759131669922" duration="2043000" />
+      <workItem from="1759133793043" duration="333000" />
     </task>
     <task id="LOCAL-00001" summary="Add DatabaseSQLTester project with SQLite integration&#10;&#10;Introduced a new project, `DatabaseSQLTester`, featuring SQLite integration using Entity Framework Core. This includes models, a DbContext for handling database interactions, test data initialization, and a console-based SQL query interface.">
       <option name="closed" value="true" />
@@ -370,7 +372,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759133624959</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Projektkonfigurationsdateien für IntelliJ IDEA hinzugefügt.">
+      <option name="closed" value="true" />
+      <created>1759134100012</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1759134100012</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -385,7 +395,8 @@
     <MESSAGE value="Add IntelliJ IDEA project configuration files&#10;&#10;Introduce .idea configuration files for CSharpTestProjects, including default ignored files, encoding settings, Android project system, VCS mappings, and index layout. These files enable proper project setup and management within IntelliJ IDEA." />
     <MESSAGE value="Add DesignPatterns projects and implement examples&#10;&#10;Introduce `CreationalPatterns` and `StructuralPatterns` projects with examples of various design patterns, including Singleton, Factory Method, Abstract Factory, Builder, Adapter, Decorator, and more. Added documentation (`ReadMe.md`) summarizing patterns with their purposes, problems addressed, solutions, and examples." />
     <MESSAGE value="Add `StartingProjects` to solution configuration and sort projects." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add `StartingProjects` to solution configuration and sort projects." />
+    <MESSAGE value="Projektkonfigurationsdateien für IntelliJ IDEA hinzugefügt." />
+    <option name="LAST_COMMIT_MESSAGE" value="Projektkonfigurationsdateien für IntelliJ IDEA hinzugefügt." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
