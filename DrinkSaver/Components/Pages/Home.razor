@@ -1,0 +1,91 @@
+﻿@page "/"
+@inject IJSRuntime JS
+@implements IDisposable
+
+<h3>Intervall-Benachrichtigungen (Client-only)</h3>
+
+<div>
+  <label>Interval (Minuten):</label>
+  <input type="number" @bind="intervalMinutes" min="1" />
+  <button @onclick="Start">Start</button>
+  <button @onclick="Stop">Stop</button>
+  <button @onclick="TriggerNow">Jetzt</button>
+</div>
+
+<div>Next: @nextRunDisplay</div>
+
+@code {
+    int intervalMinutes = 20;
+    System.Threading.Timer? scheduledTimer;
+    DateTime? nextRun;
+
+    void Start()
+    {
+        Stop();
+        CalculateNextRun();
+        if (nextRun == null) return;
+
+        var delay = nextRun.Value - DateTime.Now;
+        if (delay < TimeSpan.Zero) delay = TimeSpan.Zero;
+        // set single-shot timer to first aligned run
+        scheduledTimer = new System.Threading.Timer(async _ =>
+        {
+            await InvokeAsync(DoAction);
+
+            // after first aligned trigger: schedule periodic timer every intervalMinutes
+            scheduledTimer?.Dispose();
+            scheduledTimer = new System.Threading.Timer(async __ => await InvokeAsync(DoAction),
+                                                       null,
+                                                       TimeSpan.FromMinutes(intervalMinutes),
+                                                       TimeSpan.FromMinutes(intervalMinutes));
+        }, null, delay, Timeout.InfiniteTimeSpan);
+    }
+
+    void Stop()
+    {
+        scheduledTimer?.Dispose();
+        scheduledTimer = null;
+        nextRun = null;
+    }
+
+    void CalculateNextRun()
+    {
+        var now = DateTime.Now;
+        var i = Math.Max(1, intervalMinutes);
+        if (now.Minute % i == 0 && now.Second == 0)
+        {
+            nextRun = new DateTime(now.Year, now.Month, now.Day, now.Hour, now.Minute, 0);
+        }
+        else
+        {
+            int nextBoundary = ((now.Minute / i) + 1) * i;
+            DateTime candidate;
+            if (nextBoundary >= 60)
+                candidate = new DateTime(now.Year, now.Month, now.Day, now.Hour, 0, 0).AddHours(1);
+            else
+                candidate = new DateTime(now.Year, now.Month, now.Day, now.Hour, nextBoundary, 0);
+
+            nextRun = candidate;
+        }
+    }
+
+    string nextRunDisplay => nextRun?.ToString("HH:mm:ss dd.MM.yyyy") ?? "—";
+
+    async Task DoAction()
+    {
+        // Update next run
+        CalculateNextRun();
+        // Show notification via JS
+        await JS.InvokeVoidAsync("blazorNotify.show", "Intervall", $"Zeit: {DateTime.Now:HH:mm}");
+    }
+
+    async Task TriggerNow()
+    {
+        await DoAction();
+    }
+
+    public void Dispose()
+    {
+        Stop();
+    }
+}
