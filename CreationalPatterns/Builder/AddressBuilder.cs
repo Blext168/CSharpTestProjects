@@ -2,7 +2,7 @@
 
 public class AddressBuilder
 {
-    private Address _address = new Address();
+    private Address _address = new();
 
     public AddressBuilder WithName(string pName)
     {
