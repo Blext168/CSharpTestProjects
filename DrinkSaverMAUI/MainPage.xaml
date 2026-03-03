@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="DrinkSaverMAUI.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    BackgroundColor="{DynamicResource PageBackgroundColor}"
+    Title="Erinnerungen">
+
+    <ContentPage.Resources>
+        <Style TargetType="Label">
+            <Setter Property="FontSize" Value="14" />
+        </Style>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="18">
+
+            <Frame CornerRadius="12" HasShadow="True" Padding="16">
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="Intervall-Benachrichtigungen" FontAttributes="Bold" FontSize="18" />
+                    <Label Text="Erstellt lokale Benachrichtigungen auf deinem Gerät (funktioniert auch wenn die App im Hintergrund ist)." FontSize="12" TextColor="Gray"/>
+                </VerticalStackLayout>
+            </Frame>
+
+            <Frame CornerRadius="12" Padding="12">
+                <Grid RowDefinitions="Auto,Auto,Auto" ColumnDefinitions="*,Auto">
+                    <Label Grid.Row="0" Grid.Column="0" Text="Intervall (Minuten)" VerticalOptions="Center"/>
+                    <Entry Grid.Row="0" Grid.Column="1" WidthRequest="120" Keyboard="Numeric"
+                           Text="{Binding IntervalMinutes, Mode=TwoWay}" HorizontalTextAlignment="Center"/>
+
+                    <Label Grid.Row="1" Grid.Column="0" Text="Auf ganze Intervalle ausrichten" VerticalOptions="Center" />
+                    <Switch Grid.Row="1" Grid.Column="1" IsToggled="{Binding AlignToClock}" HorizontalOptions="End"/>
+
+                    <Label Grid.Row="2" Grid.Column="0" Text="Nächster Lauf" VerticalOptions="Center"/>
+                    <Label Grid.Row="2" Grid.Column="1" Text="{Binding NextRunDisplay}" HorizontalOptions="End"/>
+                </Grid>
+            </Frame>
+
+            <HorizontalStackLayout Spacing="12" HorizontalOptions="Center">
+                <Button Text="Start" Command="{Binding StartCommand}" WidthRequest="120" BackgroundColor="#198754" TextColor="White"/>
+                <Button Text="Stop" Command="{Binding StopCommand}" WidthRequest="120" BackgroundColor="#dc3545" TextColor="White"/>
+                <Button Text="Jetzt" Command="{Binding TriggerNowCommand}" WidthRequest="120" />
+            </HorizontalStackLayout>
+
+            <Frame CornerRadius="12" Padding="12">
+                <VerticalStackLayout Spacing="8">
+                    <Label Text="Status" FontAttributes="Bold"/>
+                    <Label Text="{Binding StatusText}" TextColor="Gray"/>
+                    <HorizontalStackLayout Spacing="8" Margin="0,8,0,0">
+                        <Button Text="Liste geplante" Command="{Binding ListScheduledCommand}" />
+                        <Button Text="Alle abbrechen" Command="{Binding CancelAllCommand}" BackgroundColor="#f0ad4e"/>
+                    </HorizontalStackLayout>
+                </VerticalStackLayout>
+            </Frame>
+
+            <Label Text="Hinweise" FontAttributes="Bold"/>
+            <Label Text="• Auf Android sind exakte wiederkehrende Alarme ggf. durch das OS limitiert.\n• Prüfe, ob in Android 13+ Berechtigungen nötig sind (Notification permission)." FontSize="12" TextColor="Gray"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

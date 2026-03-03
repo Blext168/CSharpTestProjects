@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 32 32" style="enable-background:new 0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style type="text/css">
+	.Black{fill:#727272;}
+	.Red{fill:#D11C1C;}
+	.Yellow{fill:#FFB115;}
+	.Green{fill:#039C23;}
+</style>
+  </defs>
+  <g id="Visibility">
+    <circle cx="16" cy="16" r="5.792" class="Black" style=""/>
+    <path d="M16,8C8,8,2,16,2,16s6,8,14,8s14-8,14-8S24,8,16,8z M16,22c-3.3,0-6-2.7-6-6s2.7-6,6-6s6,2.7,6,6   S19.3,22,16,22z" class="Black" style=""/>
+  </g>
+</svg>

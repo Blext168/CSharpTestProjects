@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <AssemblyName>Notification</AssemblyName>
+        <RootNamespace>Notification</RootNamespace>
+        <Title>Utilities.Notification</Title>
+        <Authors>Danilo Schiefer</Authors>
+        <Company>L.I.T. AG       </Company>
+        <AssemblyVersion>1.0.0</AssemblyVersion>
+        <FileVersion>1.0.0</FileVersion>
+        <NeutralLanguage>de-DE</NeutralLanguage>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Reference Include="Mono.Android">
+        <HintPath>..\..\..\..\..\..\Program Files\dotnet\packs\Microsoft.Android.Ref.35\35.0.101\ref\net9.0\Mono.Android.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
+</Project>

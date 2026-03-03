@@ -1,5 +1,7 @@
 ﻿# Creational Patterns
 
+Detailierte Beschreibungen/Erklärungen gibt es auf der Seite [DevIQ](https://deviq.com/design-patterns/design-patterns-overview).
+
 ## Singleton
 
 - <b>Zweck:</b> Sicherstellen, dass eine Klasse genau eine Instanz hat und globalen Zugriff bietet.

@@ -1,9 +1,11 @@
-﻿namespace Einlesen_von_Flat_Files;
+﻿using System.Linq;
+
+namespace Einlesen_von_Flat_Files;
 
 public abstract class Program
 {
-    private const string FILE_PATH =
-        @"Hier Dateipfad angeben";
+    private const string FILE_PATH = @"C:\Users\Schiefer\Desktop\C# Projekte\CSharpTestProjects\ReadFlatFiles\temperature_data.txt";
+        //@"Hier Dateipfad angeben";
 
     private static void Main() // Optional parameter: "string[] args"
     {
@@ -38,13 +40,46 @@ public abstract class Program
                     citiesOnlyOnce.Add(currentCity);
             }
 
-            // Output for each city once
-            foreach (string city in citiesOnlyOnce)
-            {
-                double max = cityTemperatures.Where(w => w.City == city).Max(m => m.Temperature);
-                double min = cityTemperatures.Where(w => w.City == city).Min(m => m.Temperature);
+            // Create one header row
+            Console.WriteLine($"{"Stadt",-20}min. temp.[°C]\tmax. temp.[°C]\tDurchschnitt [°C]");
 
-                Console.WriteLine($"{city,-20}Min = {min}\tMax = {max}\tDurchschnitt = {(max + min) / 2}"); // {city,-20} is same as {city.PadRight(20)}
+            // Output for each city once
+            foreach (string city in citiesOnlyOnce.Order())
+            {
+                // Get max value
+                //double max = cityTemperatures.Where(w => w.City == city).Max(m => m.Temperature);
+                double max = double.MinValue;
+                foreach (var temperature in from temperature in cityTemperatures.Where(w => w.City == city).Select(s => s.Temperature)
+                                            where temperature > max
+                                            select temperature)
+                {
+                    max = temperature;
+                }
+
+                // Get min value
+                //double min = cityTemperatures.Where(w => w.City == city).Min(m => m.Temperature);
+                double min = double.MaxValue;
+                foreach (var temperature in from temperature in cityTemperatures.Where(w => w.City == city).Select(s => s.Temperature)
+                                            where temperature < min
+                                            select temperature)
+                {
+                    min = temperature;
+                }
+
+                // Get average value
+                //double average = cityTemperatures.Where(w => w.City == city).Average(a => a.Temperature);
+                double average = 0;
+                int counter = 0;
+                foreach (var temperature in from temperature in cityTemperatures.Where(w => w.City == city).Select(s => s.Temperature)
+                                            select temperature)
+                {
+                    counter++;
+                    average += temperature;
+                }
+
+                average /= counter;
+
+                Console.WriteLine($"{city,-20}Min = {min}\t\tMax = {max}\tDurchschnitt = {Math.Round(average, 2)}"); // {city,-20} is same as {city.PadRight(20)}
             }
         }
         // catch if you got someone exception i.e. the file can't be opened
