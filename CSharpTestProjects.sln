@@ -44,6 +44,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PTV", "PTV", "{448A9102-5F3
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RouteCalculations", "RouteCalculations\RouteCalculations.csproj", "{7EAE4528-6C86-458D-97F7-3121B93C8957}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilesMover", "FilesMover\FilesMover.csproj", "{A2668E98-3040-4664-B2A3-647AC8384DF5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -111,6 +113,10 @@ Global
 		{7EAE4528-6C86-458D-97F7-3121B93C8957}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7EAE4528-6C86-458D-97F7-3121B93C8957}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7EAE4528-6C86-458D-97F7-3121B93C8957}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2668E98-3040-4664-B2A3-647AC8384DF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2668E98-3040-4664-B2A3-647AC8384DF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2668E98-3040-4664-B2A3-647AC8384DF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2668E98-3040-4664-B2A3-647AC8384DF5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
